@@ -1,0 +1,331 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(157, 122, 122, 0.201);
+}
+
+/* ---------------- Navbar ---------------- */
+.nav {
+  padding: 11px;
+  width: 100%;
+  height: 99px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #0f1111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  z-index: 99;
+}
+
+/* Navbar Links */
+.item1 a,
+.item2 a {
+  position: fixed;
+  top: 10px;
+  font-family: monospace;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.item1 a { margin-left: 68%; }
+.item2 a { margin-left: 74%; }
+
+.item1 a:hover,
+.item2 a:hover {
+  padding: 5px;
+  background-color: rgba(17, 220, 227, 0.714);
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 0 4px rgba(4, 44, 63, 0.971); 
+  font-weight: bolder;
+  border-radius: 8px; 
+  color: rgba(0, 0, 0, 0.84);
+}
+
+/* Logout Button */
+#logout {
+  margin-right: 10px;
+  text-decoration: none;
+  background-color: rgba(0, 110, 255, 0.882);
+  border-radius: 9px;
+  font-size: 17.5px;
+  font-family: sans-serif;
+  color: #fff;
+  padding: 11px;
+  transition: 0.3s;
+}
+
+#logout:hover {
+  background-color: rgba(0, 60, 255, 0.826);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Brand Name */
+.sangit-vaady {
+  position: fixed;
+  left: 1%;
+  font-family: monospace;
+  font-size: xx-large;
+  font-weight: bolder;
+  text-decoration: none;
+  color: rgb(23, 213, 210);
+}
+
+/* Search Bar */
+input[type=text] {
+  position: fixed;
+  margin-left: 15%;
+  width: 740px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: #fff;
+  background-image: url('Image/searchbar.png');
+  background-size: 27px 27px;
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+
+input:focus {
+  outline: 1px solid;
+}
+
+/* Shopping Cart */
+.shopping-cart {
+  width: 40px;
+  height: 63px;
+  margin-left: 89%;
+  background-repeat: no-repeat;
+}
+
+/* ---------------- Panel ---------------- */
+.panel {
+  top: 99px;
+  padding: 10px; 
+  width: 100%;
+  height: 7%;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  background-color: #31465c;
+} 
+
+.panel a {
+  padding: 11px;
+  font-family: sans-serif;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.panel a:hover {
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.798);
+}
+
+/* ---------------- Ads ---------------- */
+.ads img {
+  margin-top: 9.6%;
+  float: left;
+  background-color: #000;
+  height: 400px;
+  width: 33.3%;
+  border-bottom: 4px solid #000;
+}
+
+.adstext h3 {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(43, 159, 172, 0.53);
+  border-bottom: 4px solid;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 27px;
+} 
+
+.adstext a {
+  padding: 5px;
+  background-color: red;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 6px;
+  margin-right: 12px;
+} 
+
+/* ---------------- Products ---------------- */
+.sec {
+  padding: 10px 9%; 
+}
+
+.product {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+}
+
+.product .card {
+  width: 295px;
+  background: #f5f5f5;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.product .card img {
+  height: 240px;
+  width: 100%;
+}
+
+.product .card .desc {
+  color: #000;
+  font-size: 22px;
+  font-family: system-ui, sans-serif;
+  font-weight: 900;
+  padding: 5px 20px;
+  opacity: 0.8;
+}
+
+.product .card .title {
+  font-weight: 900;
+  font-size: 25px;
+  color: #151515;
+  padding: 0 20px;
+}
+
+.product .card .box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+}
+
+.product .card .price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product .card .btn {
+  background-color: rgba(116, 248, 255, 0.819);
+  color: black;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px;
+  transition: 0.3s;
+}
+
+.product .card .btn:hover {
+  background-color: rgba(47, 81, 203, 0.812);
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ---------------- Footer ---------------- */
+.foter {
+  width: 100%;
+  height: 170px;
+  background-color: #222f3d;
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.foter img {
+  margin-top: 70%;
+  width: 38px;
+  height: 33px;
+  margin-left: 1500%;
+}
+
+#copyr {
+  margin-top: 5%;
+  margin-left: 25%;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.nextpage a {
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 100%;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.foter #cont {
+  margin-left: 32%;
+  margin-top: 8%;
+  font-size: x-large;
+}
+
+.foter #cont a {
+  margin-left: -520%;
+  text-decoration: none;
+}
+
+/* ---------------- Responsive ---------------- */
+@media(max-width:991px) {
+  .nav {
+    padding: 20px;
+    height: auto;
+  }
+
+  input[type=text] {
+    margin-left: 11%;
+    width: 310px;
+  }
+
+  .item1 { margin-left: -23%; margin-top: -2.4%; }
+  .item2 { margin-left: 5%; margin-top: -2.4%; }
+
+  .item1 a,
+  .item2 a {
+    font-size: 2.1em;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+  }
+
+  .sangit-vaady {
+    width: 10%;
+    margin-left: -1.5%;
+  }
+
+  .logout { margin-left: 87%; }
+  .shopping-cart { margin-left: 103%; margin-top: 2%; }
+
+  .panel { height: 52px; }
+  .panel .menu { margin-top: -1.5%; font-size: 45px; font-weight: bolder; }
+
+  .product .card {
+    width: 260px;
+    padding: 10px;
+  }
+
+  .foter { height: 150px; }
+  .foter img {
+    margin-top: 30%;
+    width: 20px; /* fixed invalid "20x" */
+    height: 36px;
+    margin-left: 1150%;
+  }
+
+  #copyr { margin-top: 7%; margin-right: 17%; }
+  .foter #cont { margin-left: 3%; margin-top: 11%; }
+  .foter #cont a { margin-left: -270%; }
+}
